@@ -10,7 +10,7 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 SimpleCov.start
 
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
-Capybara.app = Rps
+Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
   config.after(:suite) do
