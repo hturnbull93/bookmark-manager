@@ -3,21 +3,43 @@
     "coverage": {
       "/home/harry/projects/bookmark-manager/app.rb": {
         "lines": [
-          1,
+          null,
           null,
           1,
           null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null,
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
           null,
           null
         ]
       },
-      "/home/harry/projects/bookmark-manager/spec/features/hello_world_spec.rb": {
+      "/home/harry/projects/bookmark-manager/spec/features/view_bookmarks_spec.rb": {
         "lines": [
           null,
           null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
           1,
           1,
           1,
@@ -27,6 +49,6 @@
         ]
       }
     },
-    "timestamp": 1586181930
+    "timestamp": 1586182934
   }
 }
