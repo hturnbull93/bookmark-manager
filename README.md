@@ -20,7 +20,7 @@ This is a project to practice creating web apps that interact with databases, us
 > I want to be able to view a list of bookmarks
 
 > As a User  
-> So I can refer to them later
+> So I can refer to them later  
 > I want to be able to add new bookmarks to the list
 
 > As a User  
@@ -49,6 +49,8 @@ This is a project to practice creating web apps that interact with databases, us
 
 ## Domain Modelling
 
+### Object Messages Table
+
 | Objects  | Messages                                    |
 | -------- | ------------------------------------------- |
 | User     |                                             |
@@ -58,3 +60,16 @@ This is a project to practice creating web apps that interact with databases, us
 | Comment  |                                             |
 | Tag      |                                             |
 
+## User Story 1
+
+> As a User  
+> So that I can visit my favourite sites  
+> I want to be able to view a list of bookmarks
+
+### Sequence Diagram
+
+![User Story 1 Sequence Diagram][User Story 1 Sequence Diagram]
+
+<!--  Links -->
+
+[User Story 1 Sequence Diagram]: https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5cdCBDbGllbnQtPj5Db250cm9sbGVyOiBIVFRQIEdFVCByZXF1ZXN0XG5cdCBDb250cm9sbGVyLT4-TW9kZWw6IGdpdmUgbWUgYWxsIGJvb2ttYXJrc1xuXHQgTW9kZWwtPj5Db250cm9sbGVyOiByZXR1cm5zIGFsbCBib29rbWFya3Ncblx0IENvbnRyb2xsZXItPj5WaWV3OiBlbWJlZCBib29rbWFya3Ncblx0IFZpZXctPj5Db250cm9sbGVyOiBodG1sXG5cdCBDb250cm9sbGVyLT4-Q2xpZW50OiBIVFRQIFJlc3BvbnNlXG5cdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9
