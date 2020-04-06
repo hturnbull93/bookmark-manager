@@ -3,10 +3,28 @@
     "coverage": {
       "/home/harry/projects/bookmark-manager/app.rb": {
         "lines": [
-
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/home/harry/projects/bookmark-manager/spec/features/hello_world_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
         ]
       }
     },
-    "timestamp": 1586181389
+    "timestamp": 1586181587
   }
 }
