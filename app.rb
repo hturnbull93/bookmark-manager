@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'sinatra/base'
+require './lib/bookmark'
 
 # The class for Sinatra to use
 class BookmarkManager < Sinatra::Base
@@ -13,11 +14,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmarks' do
-    @bookmarks = [
-      'http://www.makersacademy.com',
-      'http://www.destroyallsoftware.com',
-      'http://www.google.com'
-    ]
+    @bookmarks = Bookmark.all
     erb :'bookmarks/index'
   end
 end
