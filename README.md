@@ -21,7 +21,7 @@ This is a project to practice creating web apps that interact with databases, us
 
 > As a User  
 > So I can refer to them later  
-> I want to be able to add new bookmarks to the list
+> I want to be able to add new bookmarks with address and title
 
 > As a User  
 > So that my bookmark list doesn't get cluttered  
@@ -46,6 +46,13 @@ This is a project to practice creating web apps that interact with databases, us
 > As a User  
 > So no one else can change my bookmarks  
 > I want edit access for my bookmarks to restricted to me alone
+
+## Database Setup Instructions
+
+1. Connect to `psql`
+2. Create the database using the `psql` command `CREATE DATABASE bookmark_manager;`
+3. Connect to the database using the `pqsl` command `\c bookmark_manager;`
+4. Run the query we have saved in the file `01_create_bookmarks_table.sql`
 
 ## Domain Modelling
 
