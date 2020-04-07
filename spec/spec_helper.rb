@@ -16,8 +16,9 @@ Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
   config.after(:suite) do
+    motivation = ['Read the stacktrace!', 'Remember to commit!','Solve the simplest problem!', 'Red Green Refactor!'].sample
     puts
-    puts "\e[33mAre you already great!\e[0m"
-    puts "\e[33mI think so!\e[0m"
+    puts
+    puts "\e[33m#{motivation}\e[0m"
   end
 end
