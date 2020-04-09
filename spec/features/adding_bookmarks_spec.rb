@@ -1,8 +1,9 @@
 feature 'Adding bookmarks' do
   scenario 'user adds https://github.com' do
+    visit 'bookmarks/new'
+
     fill_in('title', with: 'GitHub')
     fill_in('url', with: 'https://github.com')
-    visit 'bookmarks/new'
     click_button('Submit')
 
     expect(page).to have_link('GitHub', href: 'https://github.com')
@@ -25,6 +26,7 @@ feature 'Adding bookmarks' do
     Bookmark.create(url: 'http://www.google.com')
 
     visit 'bookmarks/new'
+    
     fill_in('title', with: 'YouTube')
     fill_in('url', with: 'https://www.youtube.com')
     click_button('Submit')
