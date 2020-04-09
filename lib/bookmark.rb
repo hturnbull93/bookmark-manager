@@ -23,4 +23,11 @@ class Bookmark
     PG.connect(dbname: db)
   end
 
+  def initialize(id:, title:, url:)
+    @id = id
+    @title = title
+    @url = url
+  end
+
+  attr_reader :id, :title, :url
 end
