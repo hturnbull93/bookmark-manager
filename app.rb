@@ -6,6 +6,9 @@ require 'pg'
 
 # The class for Sinatra to use
 class BookmarkManager < Sinatra::Base
+
+  enable :sessions, :method_override
+
   get '/' do
     erb :index
   end
@@ -22,5 +25,11 @@ class BookmarkManager < Sinatra::Base
 
   get '/bookmarks/new' do
     erb :'bookmarks/new'
+  end
+
+  delete '/bookmarks/:id' do
+    connection = PG.connect(dbname: 'bookmark_manager_test')
+    connection.exec("DELETE FROM bookmarks WHERE id = #{params['id']}")
+    redirect
   end
 end
