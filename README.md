@@ -84,10 +84,21 @@ This is a project to practice creating web apps that interact with databases, us
 > So that I can visit my favourite sites  
 > I want to be able to view a list of bookmarks
 
-### Sequence Diagram
+### Sequence Diagram - View Bookmarks
 
 ![User Story 1 Sequence Diagram][user story 1 sequence diagram]
+
+## User Story 2
+
+> As a User  
+> So I can refer to them later  
+> I want to be able to add new bookmarks with address and title
+
+### Sequence Diagram - Add Bookmark
+
+![user story 2 sequence diagram]
 
 <!--  Links -->
 
 [user story 1 sequence diagram]: https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5cdCBDbGllbnQtPj5Db250cm9sbGVyOiBIVFRQIEdFVCByZXF1ZXN0XG5cdCBDb250cm9sbGVyLT4-TW9kZWw6IGdpdmUgbWUgYWxsIGJvb2ttYXJrc1xuXHQgTW9kZWwtPj5Db250cm9sbGVyOiByZXR1cm5zIGFsbCBib29rbWFya3Ncblx0IENvbnRyb2xsZXItPj5WaWV3OiBlbWJlZCBib29rbWFya3Ncblx0IFZpZXctPj5Db250cm9sbGVyOiBodG1sXG5cdCBDb250cm9sbGVyLT4-Q2xpZW50OiBIVFRQIFJlc3BvbnNlXG5cdCIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9
+[user story 2 sequence diagram]: https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG5cdHBhcnRpY2lwYW50IENsaWVudFxuXHRwYXJ0aWNpcGFudCBDb250cm9sbGVyXG5cdHBhcnRpY2lwYW50IE1vZGVsXG5cdHBhcnRpY2lwYW50IFZpZXdcblx0Q2xpZW50LT4-Q29udHJvbGxlcjogSFRUUCBHRVQgL2Jvb2ttYXJrcy9uZXdcblx0Q29udHJvbGxlci0-PlZpZXc6IC9ib29rbWFya3MvbmV3XG5cdFZpZXctPj5Db250cm9sbGVyOiBodG1sXG5cdENvbnRyb2xsZXItPj5DbGllbnQ6IEhUVFAgUmVzcG9uc2Vcblx0Q2xpZW50LT4-Q29udHJvbGxlcjogSFRUUCBQT1NUIC9ib29rbWFya3MgKGZvcm0pXG5cdENvbnRyb2xsZXItPj5Nb2RlbDogc3RvcmUgYm9va21hcmtcblx0Q29udHJvbGxlci0-PkNsaWVudDogSFRUUCBSZWRpcmVjdCAvYm9va21hcmtzIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifX0
