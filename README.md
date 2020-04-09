@@ -96,7 +96,7 @@ This is a project to practice creating web apps that interact with databases, us
 
 ### Sequence Diagram - Add Bookmark
 
-![user story 2 sequence diagram]
+![user story 2 sequence diagram][user story 2 sequence diagram]
 
 <!--  Links -->
 
