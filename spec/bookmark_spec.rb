@@ -6,10 +6,10 @@ describe Bookmark do
   describe '#all' do
     it 'returns all bookmarks' do
       # Add the test data
-      Bookmark.create(url: 'http://www.makersacademy.com')
-      Bookmark.create(url: 'http://www.destroyallsoftware.com')
-      Bookmark.create(url: 'http://www.google.com')
-
+      Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
+      Bookmark.create(url: 'http://www.destroyallsoftware.com', title: 'Destroy All Software')
+      Bookmark.create(url: 'http://www.google.com', title: 'Google')
+  
       bookmarks = Bookmark.all
 
       expect(bookmarks).to include('http://www.makersacademy.com')

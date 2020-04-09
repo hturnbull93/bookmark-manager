@@ -21,12 +21,12 @@ feature 'Adding bookmarks' do
 
   scenario 'user adds https://www.youtube.com, and sees all current bookmarks' do
     # Add the test data
-    Bookmark.create(url: 'http://www.makersacademy.com')
-    Bookmark.create(url: 'http://www.destroyallsoftware.com')
-    Bookmark.create(url: 'http://www.google.com')
+    Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
+    Bookmark.create(url: 'http://www.destroyallsoftware.com', title: 'Destroy All Software')
+    Bookmark.create(url: 'http://www.google.com', title: 'Google')
 
     visit 'bookmarks/new'
-    
+
     fill_in('title', with: 'YouTube')
     fill_in('url', with: 'https://www.youtube.com')
     click_button('Submit')
