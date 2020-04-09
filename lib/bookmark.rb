@@ -4,14 +4,16 @@ require 'pg'
 
 class Bookmark
   def self.all
-    connection = self.connection_type
-    result = connection.exec("SELECT * FROM bookmarks;")
+    connection = connection_type
+    result = connection.exec('SELECT * FROM bookmarks;')
     result.map { |bookmark| bookmark['url'] }
   end
 
-  def self.create(url:)
-    connection = self.connection_type
-    connection.exec("INSERT INTO bookmarks (url) VALUES ('#{url}')")
+  def self.create(url:, title:)
+    connection = connection_type
+    connection.exec("INSERT INTO bookmarks (title, url)
+                          VALUES ('#{title}', '#{url}')
+                       RETURNING id, url, title")
   end
 
   def self.connection_type
