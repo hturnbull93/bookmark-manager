@@ -11,20 +11,24 @@ describe Bookmark do
       Bookmark.create(url: 'http://www.google.com', title: 'Google')
 
       bookmarks = Bookmark.all
+      p 'bookmark individual'
+      p bookmark
+      p 'bookmark array'
+      p bookmarks
 
       expect(bookmarks.length).to eq 3
       expect(bookmarks.first).to be_a Bookmark
       expect(bookmarks.first.id).to eq bookmark.id
       expect(bookmarks.first.title).to eq 'Makers Academy'
-      expect(bookmarks.first.url).to eq 'http://www.makersacademy.com'    end
+      expect(bookmarks.first.url).to eq 'http://www.makersacademy.com'
+    end
   end
 
   describe '#create' do
     it 'creates a new bookmark' do
-      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark').first
-  
-      expect(bookmark['url']).to eq 'http://www.testbookmark.com'
-      expect(bookmark['title']).to eq 'Test Bookmark'
+      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+      expect(bookmark.url).to eq 'http://www.testbookmark.com'
+      expect(bookmark.title).to eq 'Test Bookmark'
     end
   end
 end
