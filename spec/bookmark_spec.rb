@@ -11,10 +11,6 @@ describe Bookmark do
       Bookmark.create(url: 'http://www.google.com', title: 'Google')
 
       bookmarks = Bookmark.all
-      p 'bookmark individual'
-      p bookmark
-      p 'bookmark array'
-      p bookmarks
 
       expect(bookmarks.length).to eq 3
       expect(bookmarks.first).to be_a Bookmark
