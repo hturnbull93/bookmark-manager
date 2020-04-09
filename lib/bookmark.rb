@@ -6,7 +6,9 @@ class Bookmark
   def self.all
     connection = connection_type
     result = connection.exec('SELECT * FROM bookmarks;')
-    result.map { |bookmark| bookmark['url'] }
+    result.map do |bookmark|
+      Bookmark.new(id: bookmark[:id], title: bookmark[:title], url: bookmark[:url])
+    end
   end
 
   def self.create(url:, title:)
