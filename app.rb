@@ -15,7 +15,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/bookmarks' do
-    "https://github.com"
+    params[:url]
   end
 
   get '/bookmarks/new' do
