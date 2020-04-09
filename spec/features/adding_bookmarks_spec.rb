@@ -9,7 +9,7 @@ feature 'Adding bookmarks' do
     expect(page).to have_link('GitHub', href: 'https://github.com')
   end
 
-  scenario 'user adds https://www.youtube.com' do
+  xscenario 'user adds https://www.youtube.com' do
     visit 'bookmarks/new'
 
     fill_in('title', with: 'YouTube')
@@ -19,7 +19,7 @@ feature 'Adding bookmarks' do
     expect(page).to have_link('YouTube', href: 'https://www.youtube.com')
   end
 
-  scenario 'user adds https://www.youtube.com, and sees all current bookmarks' do
+  xscenario 'user adds https://www.youtube.com, and sees all current bookmarks' do
     # Add the test data
     Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
     Bookmark.create(url: 'http://www.destroyallsoftware.com', title: 'Destroy All Software')
