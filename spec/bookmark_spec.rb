@@ -6,10 +6,9 @@ describe Bookmark do
   describe '#all' do
     it 'returns all bookmarks' do
       # Add the test data
-      connection = PG.connect(dbname: 'bookmark_manager_test')
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.makersacademy.com');")
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.destroyallsoftware.com');")
-      connection.exec("INSERT INTO bookmarks (url) VALUES('http://www.google.com');")
+      Bookmark.create(url: 'http://www.makersacademy.com')
+      Bookmark.create(url: 'http://www.destroyallsoftware.com')
+      Bookmark.create(url: 'http://www.google.com')
 
       bookmarks = Bookmark.all
 
