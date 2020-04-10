@@ -42,7 +42,9 @@ class BookmarkManager < Sinatra::Base
   end
 
   patch '/bookmarks/:id' do
-    Bookmark.update(id: params[:id], url: params[:url], title: params[:title])
+    unless Bookmark.update(id: params[:id], url: params[:url], title: params[:title])
+      flash[:notice] = 'You must submit a valid URL'
+    end
     redirect '/bookmarks'
   end
 end
