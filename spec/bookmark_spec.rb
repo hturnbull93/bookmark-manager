@@ -26,8 +26,6 @@ describe Bookmark do
       bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
       persisted_data = persisted_data(table: 'bookmarks', id: bookmark.id)
 
-      p persisted_data
-
       expect(bookmark).to be_a Bookmark
       expect(bookmark.id).to eq persisted_data.first['id']
       expect(bookmark.title).to eq 'Test Bookmark'
