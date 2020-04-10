@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'bookmark'
+require 'database_helpers'
+
 
 describe Bookmark do
   describe '#all' do
@@ -23,8 +25,12 @@ describe Bookmark do
   describe '#create' do
     it 'creates a new bookmark' do
       bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
-      expect(bookmark.url).to eq 'http://www.testbookmark.com'
+      persisted_data = persisted_data(id: bookmark.id)
+  
+      expect(bookmark).to be_a Bookmark
+      expect(bookmark.id).to eq persisted_data['id']
       expect(bookmark.title).to eq 'Test Bookmark'
+      expect(bookmark.url).to eq 'http://www.testbookmark.com'
     end
 
     it 'does not create if the url is not valid' do
