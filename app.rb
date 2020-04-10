@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'pg'
+require 'uri'
 
 require 'sinatra/base'
 require 'sinatra/flash'
 require './lib/bookmark'
 require './database_connection_setup'
-require 'uri'
 
 # The class for Sinatra to use
 class BookmarkManager < Sinatra::Base
