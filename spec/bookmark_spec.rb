@@ -3,7 +3,6 @@
 require 'bookmark'
 require 'database_helpers'
 
-
 describe Bookmark do
   describe '#all' do
     it 'returns all bookmarks' do
@@ -26,7 +25,7 @@ describe Bookmark do
     it 'creates a new bookmark' do
       bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
       persisted_data = persisted_data(table: 'bookmarks', id: bookmark.id)
-  
+
       p persisted_data
 
       expect(bookmark).to be_a Bookmark
@@ -74,7 +73,6 @@ describe Bookmark do
       expect(updated_bookmark.id).to eq bookmark.id
       expect(updated_bookmark.title).to eq 'Test Bookmark'
       expect(updated_bookmark.url).to eq 'http://www.testbookmark.com'
-
     end
   end
 
