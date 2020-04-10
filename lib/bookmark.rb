@@ -24,6 +24,11 @@ class Bookmark
     PG.connect(dbname: db)
   end
 
+  def self.delete(id:)
+    connection = connection_type
+    connection.exec("DELETE FROM bookmarks WHERE id = #{id}")
+  end
+
   def initialize(id:, title:, url:)
     @id = id
     @title = title
