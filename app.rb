@@ -47,4 +47,9 @@ class BookmarkManager < Sinatra::Base
     end
     redirect '/bookmarks'
   end
+
+  get 'bookmarks/:id/comments/new' do
+    @bookmark_id = params[:id]
+    erb :'comments/new'
+  end
 end
