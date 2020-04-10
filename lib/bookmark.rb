@@ -46,6 +46,11 @@ class Bookmark
 
   attr_reader :id, :title, :url
 
+  def comments
+    DatabaseConnection.query("SELECT * FROM comments
+                               WHERE bookmark_id = #{@id};")
+  end
+
   private
 
   def self.url?(url)
