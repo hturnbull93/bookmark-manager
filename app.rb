@@ -8,10 +8,9 @@ require 'uri'
 
 # The class for Sinatra to use
 class BookmarkManager < Sinatra::Base
-
   enable :sessions, :method_override
   register Sinatra::Flash
-  
+
   get '/' do
     erb :index
   end
@@ -22,7 +21,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/bookmarks' do
-    if params[:url] =~ /\A#{URI::regexp(['http', 'https'])}\z/
+    if params[:url] =~ /\A#{URI.regexp(%w[http https])}\z/
       Bookmark.create(url: params[:url], title: params[:title])
     else
       flash[:notice] = 'You must submit a valid URL'
