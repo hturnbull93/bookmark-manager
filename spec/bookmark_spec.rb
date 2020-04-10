@@ -51,4 +51,16 @@ describe Bookmark do
     end
   end
 
+  describe '#find' do
+    it 'returns the requested bookmark object' do
+      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+
+      result = Bookmark.find(id: bookmark.id)
+
+      expect(result).to be_a Bookmark
+      expect(result.id).to eq bookmark.id
+      expect(result.title).to eq 'Test Bookmark'
+      expect(result.url).to eq 'http://www.testbookmark.com'
+    end
+  end
 end
