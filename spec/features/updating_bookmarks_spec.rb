@@ -1,6 +1,6 @@
 feature 'Updating Bookmarks' do
   scenario 'replace mispelled title' do
-    Bookmark.create(url: 'https://www.mispelleddomain.com', title: 'Mispelled Title')
+    bookmark = Bookmark.create(url: 'https://www.mispelleddomain.com', title: 'Mispelled Title')
 
     visit 'bookmarks'
     expect(page).to have_link('Mispelled Title', href: 'https://www.mispelleddomain.com')
