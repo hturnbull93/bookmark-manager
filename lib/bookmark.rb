@@ -7,15 +7,15 @@ class Bookmark
     connection = connection_type
     result = connection.exec('SELECT * FROM bookmarks;')
     result.map do |bookmark|
-      Bookmark.new(id: bookmark["id"], title: bookmark["title"], url: bookmark["url"])
+      Bookmark.new(id: bookmark['id'], title: bookmark['title'], url: bookmark['url'])
     end
   end
 
   def self.create(url:, title:)
     connection = connection_type
     result = connection.exec("INSERT INTO bookmarks (title, url)
-                          VALUES ('#{title}', '#{url}')
-                       RETURNING id, url, title")
+                                   VALUES ('#{title}', '#{url}')
+                                RETURNING id, url, title")
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 
@@ -27,6 +27,15 @@ class Bookmark
   def self.delete(id:)
     connection = connection_type
     connection.exec("DELETE FROM bookmarks WHERE id = #{id}")
+  end
+
+  def self.update(id:, title:, url:)
+    connection = connection_type
+    result = connection.exec("UPDATE bookmarks
+                                 SET url = '#{url}', title = '#{title}'
+                               WHERE id = '#{id}'
+                           RETURNING id, url, title;")
+    Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 
   def initialize(id:, title:, url:)
