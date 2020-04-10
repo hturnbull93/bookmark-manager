@@ -38,6 +38,12 @@ class Bookmark
     Bookmark.new(id: result[0]['id'], title: result[0]['title'], url: result[0]['url'])
   end
 
+  def self.find(id:)
+    connection = connection_type
+    result = connection.exec("SELECT * FROM bookmarks WHERE id = #{id}")
+    Bookmark.new(id: result[0]['id'], url: result[0]['url'], title: result[0]['title'])
+  end
+
   def initialize(id:, title:, url:)
     @id = id
     @title = title
