@@ -54,6 +54,20 @@ describe Bookmark do
       expect(updated_bookmark.title).to eq 'New Title'
       expect(updated_bookmark.url).to eq 'http://www.updatedbookmark.com'
     end
+
+    it 'does not update bookmark if new url not valid' do
+      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
+
+      Bookmark.update(id: bookmark.id, title: 'New Title', url: 'not valid url')
+
+      updated_bookmark = Bookmark.all.first
+
+      expect(updated_bookmark).to be_a Bookmark
+      expect(updated_bookmark.id).to eq bookmark.id
+      expect(updated_bookmark.title).to eq 'Test Bookmark'
+      expect(updated_bookmark.url).to eq 'http://www.testbookmark.com'
+
+    end
   end
 
   describe '#find' do
