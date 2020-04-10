@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'database_connection'
+require_relative 'database_connection'
 
 class Bookmark
   def self.all
